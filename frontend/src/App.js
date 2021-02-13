@@ -4,20 +4,32 @@ function App() {
 	const [bio, setBio] = useState('');
 
 	const mySubmitHandler = (event) => {
+		// * Prevent reload
 		event.preventDefault();
-		console.log(bio);
+		var data = new URLSearchParams();
+		data.append('bio', bio);
+
+		const url = 'http://localhost:4000/';
+		fetch(url, {
+			method: 'POST',
+			body: data,
+			headers: {
+				'Content-Type': 'application/x-www-form-urlencoded',
+			},
+		})
+			.then((response) => response.json())
+			.then((data) => console.log(data));
 	};
 
 	const myChangeHandler = (event) => {
-		console.log(event.target.value);
 		setBio(event.target.value);
 	};
 
 	return (
 		<div className="App" className="container mx-auto">
-			<form className="text-center" onSubmit={mySubmitHandler}>
-				<p>Enter your name, and submit:</p>
-				<textarea type="text" onChange={myChangeHandler} />
+			<form onSubmit={mySubmitHandler} method="post">
+				<p>Enter a bio, and submit:</p>
+				<input name="bio" type="text" onChange={myChangeHandler} />
 				<input type="submit" />
 			</form>
 		</div>
