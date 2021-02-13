@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 function App() {
 	const [bio, setBio] = useState('');
+	const [images, setImages] = useState([]);
 
 	const mySubmitHandler = (event) => {
 		// * Prevent reload
