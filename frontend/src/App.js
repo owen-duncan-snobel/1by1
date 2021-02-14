@@ -7,8 +7,8 @@ const App = () => {
 				role="navigation"
 				className="flex justify-between items-center h-16 bg-gradient-to-r from-indigo-900 to-indigo-700 text-white relative"
 			>
-				<a href="index.html" className="pl-6">
-					NAME
+				<a href="index.html" className="pl-6 font-extrabold" >
+					1 by 1
 				</a>
 				<div className="px-4 cursor-pointer md:hidden" id="bars">
 					<svg
@@ -27,15 +27,22 @@ const App = () => {
 					</svg>
 				</div>
 				<div className="hidden md:block" id="menu">
-					<a href="index.html" className="p-4">
+					<a href="index.html" className="p-4 font-bold">
 						Home
 					</a>
-					<a href="about.html" className="p-4">
+					<a href="about.html" className="p-4 font-bold">
 						About
 					</a>
 				</div>
 			</nav>
-			<div className="h-screen bg-gray-800">
+			<div className="h-screen bg cover bg-gray-800">
+				<div className="text-center font-bold">
+					<h1
+						className="lg:text-9xl sm:text-6xl text5xl mb-10 text-indigo-600 hover:text-white duration-300"
+					>
+					Create your bio
+					</h1>
+				</div>
 				<Form />
 			</div>
 		</div>
