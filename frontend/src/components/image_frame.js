@@ -13,7 +13,6 @@ const ImageFrame = ({ data }) => {
 		}
 	}, [data]);
 
-	console.log(data);
 	const initCanvas = (icon, id) => {
 		// * hardcodes the location of the image, for the final version you can use ( .download_url for the full version unscaled)
 		let imgLink = icon.raster_sizes[7].formats[0].preview_url;
