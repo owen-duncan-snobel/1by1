@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import ImageFrame from './image_frame';
 
 const Form = () => {
 	const [bio, setBio] = useState('');
-	const [images, setImages] = useState([]);
+	const [images, setImages] = useState({ icons: [{ icon_id: -1 }] });
 
 	const mySubmitHandler = (event) => {
 		// * Prevent reload
@@ -19,7 +20,7 @@ const Form = () => {
 			},
 		})
 			.then((response) => response.json())
-			.then((data) => console.log(data));
+			.then((data) => setImages(data));
 	};
 
 	const myChangeHandler = (event) => {
@@ -35,6 +36,7 @@ const Form = () => {
 				onChange={myChangeHandler}
 			/>
 			<input type="submit" />
+			<ImageFrame data={images} />
 		</form>
 	);
 };

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Form from './components/form';
 const App = () => {
 	return (
-		<div className="App ">
+		<div className="App min-h-screen bg-gray-800">
 			<nav
 				role="navigation"
 				className="flex justify-between items-center h-16 bg-gradient-to-r from-indigo-900 to-indigo-700 text-white relative"
@@ -35,7 +35,7 @@ const App = () => {
 					</a>
 				</div>
 			</nav>
-			<div className="h-screen bg-gray-800">
+			<div className="">
 				<Form />
 			</div>
 		</div>

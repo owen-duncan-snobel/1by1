@@ -1820,7 +1820,7 @@ router.post('/', async (req, res) => {
 		};
 
 		await fetch(
-			'https://api.iconfinder.com/v4/icons/search?query=dog&count=10&premium=0&license=empty',
+			'https://api.iconfinder.com/v4/icons/search?query=dog&count=9&premium=0&license=empty',
 			options
 		)
 			.then((response) => response.json())
