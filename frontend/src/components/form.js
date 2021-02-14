@@ -31,12 +31,19 @@ const Form = () => {
 		<form className="text-center" onSubmit={mySubmitHandler}>
 			<p>Enter your bio:</p>
 			<textarea
-				className="w-24 md:w-auto"
+				className="form-textarea mt-1 center w-30"
+				rows="3"
+				placeholder="Enter your bio."
 				type="text"
 				onChange={myChangeHandler}
 			/>
-			<input type="submit" />
-			<ImageFrame data={images} />
+			<input
+				className="focus:ring-2 focus:ring-indigo-600 bg-red-600 hover:bg-red-700"
+				type="submit"
+			/>
+			<div>
+				<ImageFrame data={images} />
+			</div>
 		</form>
 	);
 };
