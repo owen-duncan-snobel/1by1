@@ -1,5 +1,4 @@
 const async = require('async');
-const fs = require('fs');
 const pg = require('pg');
 
 // Connect to the "bank" database.
