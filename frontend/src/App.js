@@ -35,10 +35,16 @@ const App = () => {
 					</a>
 				</div>
 			</nav>
-			<div className="h-screen bg cover bg-gray-800">
+			<div className="h-screen bg cover bg-indigo-300">
 				<div className="text-center font-bold">
 					<h1 className="lg:text-9xl sm:text-6xl text5xl mb-10 text-indigo-600 hover:text-white duration-300">
 						Create your bio
+					</h1>
+				</div>
+				<div className="place-self-center sm:w-1/3">
+					<h1 className="lg:text-9sm sm:text-5sm text-3sm mb-10 text-black" >We are aiming to primarily assist small and new businesses in their mission to start or maintain an online presence by making it 
+						quick and easy to find new things to post. All you have to do is enter a bio in our website and it will come up with multiple images
+						that relate to the wording in the bio.
 					</h1>
 				</div>
 				<Form />
