@@ -1,5 +1,0 @@
-I210214 09:20:36.816164 1 util/log/sync_buffer.go:196 ⋮ [config] file created at: 2021/02/14 09:20:36
-I210214 09:20:36.816179 1 util/log/sync_buffer.go:196 ⋮ [config] running on machine: ‹mp›
-I210214 09:20:36.816186 1 util/log/sync_buffer.go:196 ⋮ [config] binary: CockroachDB CCL v20.2.4 (x86_64-apple-darwin14, built 2021/01/21 00:12:56, go1.13.14)
-I210214 09:20:36.816192 1 util/log/sync_buffer.go:196 ⋮ [config] arguments: ‹[cockroach start]›
-I210214 09:20:36.816203 1 util/log/sync_buffer.go:196 ⋮ [config] line format: [IWEF]yymmdd hh:mm:ss.uuuuuu goid file:line msg utf8=✓
