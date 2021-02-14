@@ -2,3 +2,5 @@
 .env
 /.*
 cc-ca.crt
+/certs
+ca.key

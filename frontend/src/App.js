@@ -37,11 +37,11 @@ const App = () => {
 			</nav>
 			<div className="h-full bg cover bg-indigo-300">
 				<div className="text-center font-bold">
-					<h1 className="lg:text-9xl sm:text-6xl text5xl mb-10 text-indigo-600 hover:text-white duration-300">
+					<h1 className="lg:text-9xl text-5xl sm:text-6xl text5xl mb-10 text-indigo-600 hover:text-white duration-300">
 						Create your bio
 					</h1>
 				</div>
-				<div className="place-self-center sm:w-1/3">
+				<div className="place-self-center sm:w-1/3 mx-auto">
 					<h1 className="lg:text-9sm sm:text-5sm text-3sm mb-10 text-black">
 						We are aiming to primarily assist small and new
 						businesses in their mission to start or maintain an

@@ -38,7 +38,7 @@ const ImageFrame = ({ data }) => {
 		<div>
 			<div className=" text-center">
 				<div className="fixed bottom-0 right-0">
-					<div className="col-start-2 col-span-4 mx-auto pr-2">
+					<div className="col-start-2 col-span-4 mx-auto pr-2 hidden sm:block">
 						{data.icons[0].icon_id !== -1 && (
 							<TwitterPicker
 								color={background}
@@ -51,7 +51,7 @@ const ImageFrame = ({ data }) => {
 				</div>
 			</div>
 			<div>
-				<div className="inline-grid gap-1 grid-cols-3 content-center">
+				<div className="inline-grid gap-1 lg:grid-cols-3 content-center">
 					{data.icons.map((icon) => {
 						return (
 							<canvas
