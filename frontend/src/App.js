@@ -1,5 +1,7 @@
 import React from 'react';
 import Form from './components/form';
+import Logo from './development.svg';
+
 const App = () => {
 	return (
 		<div className="App min-h-screen bg-gray-800">
@@ -36,6 +38,20 @@ const App = () => {
 				</div>
 			</nav>
 			<div className="h-full bg cover bg-indigo-300">
+				<div className="p-4">
+					<div className="grid grid-rows-3 grid-flow-col gap-4 ml-64 mr-64 ">
+						<div className="row-span-3 ...">
+							{' '}
+							<img
+								src={Logo}
+								className="text-center"
+								alt="Logo"
+							/>
+						</div>
+						<div className="col-span-2 ..."></div>
+						<div className="row-span-2 col-span-2 ..."></div>
+					</div>
+				</div>
 				<div className="text-center font-bold">
 					<h1 className="lg:text-9xl text-5xl sm:text-6xl text5xl mb-10 text-indigo-600 hover:text-white duration-300">
 						Create your bio
