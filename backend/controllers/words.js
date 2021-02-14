@@ -1798,7 +1798,7 @@ let example = {
 };
 
 router.get('/', (req, res) => {
-	res.send(data);
+	res.send('');
 });
 
 router.post('/', (req, res) => {
