@@ -16,20 +16,29 @@ const ImageFrame = ({ data }) => {
 	}, [data, background]);
 
 	const initCanvas = (icon, id) => {
-		// * hardcodes the location of the image, for the final version you can use ( .download_url for the full version unscaled)
-		let imgLink =
-			icon.raster_sizes[icon.raster_sizes.length - 1].formats[0]
-				.preview_url;
-		let canvas = new fabric.Canvas(id.toString(), {
-			height: 300,
-			width: 300,
-			backgroundColor: background,
-		});
+		try {
+			let imgLink;
+			if (icon.raster_sizes[5] == null) {
+				imgLink =
+					icon.raster_sizes[icon.raster_sizes.length - 1].formats[0]
+						.preview_url;
+			} else {
+				imgLink = icon.raster_sizes[6].formats[0].preview_url;
+			}
+			// * hardcodes the location of the image, for the final version you can use ( .download_url for the full version unscaled)
+			let canvas = new fabric.Canvas(id.toString(), {
+				height: 300,
+				width: 300,
+				backgroundColor: background,
+			});
 
-		fabric.Image.fromURL(imgLink, function (oImg) {
-			canvas.add(oImg);
-		});
-		return canvas;
+			fabric.Image.fromURL(imgLink, function (oImg) {
+				canvas.add(oImg);
+			});
+			return canvas;
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	const handleChangeComplete = (color) => {
